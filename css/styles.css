@@ -300,3 +300,42 @@ footer p {
 .footer-links a:hover {
     color: #4CAF50;
 }
+
+/* Style for explanation container */
+.explanation-container {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    display: block; /* Initially hidden, will be shown when needed */
+    font-family: Arial, sans-serif;
+}
+
+/* Heading for explanation */
+.explanation-container h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Ordered list for steps */
+.explanation-container ol {
+    padding-left: 20px;
+}
+
+/* List items with step numbering */
+.explanation-container li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+
+/* Optional: Add a border to each step for better separation */
+.explanation-container li {
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 5px;
+}
+
+

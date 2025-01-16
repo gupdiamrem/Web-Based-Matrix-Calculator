@@ -59,6 +59,21 @@
                 <div id="eigenvalues"></div> <!-- This will display the eigenvalues -->
                 <div id="eigenvectors"></div> <!-- This will display the eigenvectors -->
             </div>
+            <div id="eigenExplanation" class="explanation-container">
+                <h3>Steps to Calculate Eigenvalues and Eigenvectors:</h3>
+                <ol>
+                    <li>Start with the matrix A, and subtract λI (where λ is a scalar and I is the identity matrix) from A:</li>
+                    <pre>
+                    A - λI
+                    </pre>
+                    <li>Calculate the determinant of (A - λI) and set it equal to zero:</li>
+                    <pre>
+                    det(A - λI) = 0
+                    </pre>
+                    <li>Solve for λ to find the eigenvalues.</li>
+                    <li>For each eigenvalue, substitute it back into the equation (A - λI)x = 0 to find the corresponding eigenvector(s).</li>
+                </ol>
+            </div>
         </div>
     </div>
     <footer>

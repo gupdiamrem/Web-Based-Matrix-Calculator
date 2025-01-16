@@ -56,7 +56,20 @@
                 <h3>Matrix Rank:</h3>
                 <div id="result"></div>
             </div>
+
+            <!-- Explanation Container for Steps -->
+            <div id="rankExplanation" class="explanation-container">
+                <h3>Steps to Calculate Rank:</h3>
+                <ol>
+                    <li>Identify the matrix dimensions (rows x columns).</li>
+                    <li>Apply Gaussian elimination. Check if the pivot is non-zero; if not, swap rows.</li>
+                    <li>For each row, eliminate the values below the pivot using row operations.</li>
+                    <li>Continue the row operations until the matrix is in row echelon form.</li>
+                    <li>Count the number of non-zero rows; this is the rank of the matrix.</li>
+                </ol>
+            </div>
         </div>
+        
     </div>
 
     <footer>

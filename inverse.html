@@ -54,6 +54,16 @@
             <h3>Matrix Inverse:</h3>
             <div id="result"></div>
         </div>
+        <div id="inverseExplanation" class="explanation-container">
+            <h3>Steps to Find the Inverse of a Matrix:</h3>
+            <ol>
+                <li>Ensure the matrix is square (same number of rows and columns) and has a non-zero determinant.</li>
+                <li>Compute the matrix of minors for the original matrix.</li>
+                <li>Find the cofactor matrix by applying a checkerboard pattern of signs to the matrix of minors.</li>
+                <li>Calculate the adjugate matrix by taking the transpose of the cofactor matrix.</li>
+                <li>Multiply the adjugate matrix by the reciprocal of the determinant of the original matrix to get the inverse.</li>
+            </ol>
+        </div>
         </div>
     </div>
     <footer>
