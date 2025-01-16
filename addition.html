@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Addition</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="page-header">
+        <h1>Matrix Addition</h1>
+    </header>
+    
+    <div class="container">
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="addition.html">Addition</a></li>
+                <li><a href="subtraction.html">Subtraction</a></li>
+                <li><a href="multiplication.html">Multiplication</a></li>
+                <li><a href="inverse.html">Inverse</a></li>
+                <li><a href="transpose.html">Transpose</a></li>
+                <li><a href="determinant.html">Determinant</a></li>
+                <li><a href="minors.html">Matrix of Minors</a></li>
+                <li><a href="cofactors.html">Matrix of Cofactors</a></li>
+                <li><a href="eigen.html">Eigenvalues and Eigenvectors of Matrix</a></li>
+                <li><a href="rank.html">Rank</a></li>
+
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="input-section">
+            <form id="matrixSizeForm">
+                <label for="rows">Rows:</label>
+                <input type="number" id="rows" name="rows" min="1" value="0">
+                <label for="columns">Columns:</label>
+                <input type="number" id="columns" name="columns" min="1" value="0">
+            </form>
+        </div>
+
+            <form id="matrixAdditionForm">
+                <div class="matrix-container">
+                    <div class="matrix-section">
+                        <h2>Matrix A:</h2>
+                        <table id="matrixA" class="matrix-table"></table>
+                    </div>
+                    <div class="matrix-section">
+                        <h2>Matrix B:</h2>
+                        <table id="matrixB" class="matrix-table"></table>
+                    </div>
+                </div>
+                <div class="button-container">
+                <button type="submit">Calculate</button>
+                <button type="button" id="clearButton">Clear</button>
+                </div>
+            </form>
+            
+            <div class="result-container">
+            <h3>Matrix Sum:</h3>
+            <div id="result"></div>
+        </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Matrix Calculator. All rights reserved.</p>
+        <ul class="footer-links">
+            
+            <li><a href="https://github.com/gupdiamrem" target="_blank">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/charlie-mcewen-63a446269/" target="_blank">LinkedIn</a></li>
+        </ul>
+    </footer>
+    <script src="js/matrixAdd.js"></script>
+
+</body>
+</html>

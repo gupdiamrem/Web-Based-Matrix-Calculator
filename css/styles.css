@@ -1,0 +1,302 @@
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Allow vertical stacking for header and content */
+    height: 100vh; /* Ensure the body fills the viewport height */
+}
+
+/* Header Styling */
+.page-header {
+    background-color: #333; /* Deep blue */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%; /* Full width header */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Keep it above other elements */
+    flex-shrink: 0; /* Prevent the header from shrinking */
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+/* Container for Sidebar and Content */
+.container {
+    display: flex;
+    flex: 1; /* Allow the container to fill the remaining space after the header */
+    width: 100%;
+}
+
+/* Sidebar Menu */
+.menu {
+    width: 200px;
+    background-color: #333;
+    height: 100%; /* Full height within the container */
+    padding-top: 20px;
+    flex-shrink: 0; /* Prevent the menu from shrinking */
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 10px;
+    text-align: center;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.menu a:hover {
+    background-color: #575757;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    align-items: center;
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+/* Matrix Table */
+.matrix-table {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.matrix-table td {
+    padding: 5px;
+}
+
+.matrix-table input {
+    width: 60px;
+    height: 35px;
+    text-align: center;
+    padding: 5px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.matrix-table input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    background-color: #e8f5e9;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+}
+
+.matrix-table input:hover {
+    background-color: #f1f1f1;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+#clearButton {
+    background-color: #f44336;
+}
+
+#clearButton:hover {
+    background-color: #d32f2f;
+    transform: scale(1.1);
+}
+/* Container for buttons */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centers the buttons horizontally */
+    align-items: center; /* Centers the buttons vertically */
+    margin-top: 20px; /* Optional: adds space above the button container */
+}
+
+/* Eigenvalues & Eigenvectors Sections */
+#eigenvalues, #eigenvectors {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+/* Input Fields */
+input {
+    width: 60px;
+    height: 35px;
+    text-align: center;
+    padding: 5px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    background-color: #e8f5e9;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+}
+
+input:hover, .matrix-table input:hover {
+    background-color: #f1f1f1;
+}
+
+/* Flexbox layout for Matrix A and Matrix B */
+.matrix-container {
+    display: flex;
+    gap: 20px; /* Add some space between the two matrices */
+    justify-content: center; /* Center the matrices horizontally */
+    margin-bottom: 20px; /* Add space below the matrices */
+}
+
+.matrix-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content within each matrix section */
+}
+
+.input-section{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+
+#matrixSizeForm input {
+    padding-left: 20px; /* Adds padding to the left of the input text */
+}
+
+
+.result-container{
+    display: flex;
+    flex-direction:column;
+    justify-content: center; /* Centers the buttons horizontally */
+    align-items: center; /* Centers the buttons vertically */
+    margin-top: 20px; /* Optional: adds space above the button container */
+}
+
+/* Features Section */
+.features {
+    position: absolute;
+    left: 220px; /* Adjusted to account for the sidebar width (200px + padding/margin) */
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(50% - 220px); /* Adjust the width to leave room for the 'Why Use' section */
+    padding: 20px;
+    text-align: left;
+}
+
+.features h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.features ul {
+    list-style: disc inside;
+    margin: 0;
+    padding: 0;
+}
+
+.features li {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.why-use {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40%; /* Adjust width to your preference */
+    padding: 20px;
+    text-align: left;
+}
+
+.why-use h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.why-use ul {
+    list-style: disc inside;
+    margin: 0;
+    padding: 0;
+}
+
+.why-use li {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.why-use p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #4CAF50;
+}
