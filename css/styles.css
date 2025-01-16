@@ -59,6 +59,10 @@ body {
 
 .menu a:hover {
     background-color: #575757;
+    transform: scale(1.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+
+
 }
 
 /* Main Content */
@@ -106,18 +110,22 @@ body {
 /* Buttons */
 button {
     padding: 10px 20px;
-    background-color: #4CAF50;
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 25px;
     transition: background-color 0.3s, transform 0.2s ease-in-out;
     margin: 10px;
+
 }
 
 button:hover {
     background-color: #45a049;
     transform: scale(1.1);
+}
+
+#submitButton{
+    background-color: #4CAF50;
 }
 
 #clearButton {

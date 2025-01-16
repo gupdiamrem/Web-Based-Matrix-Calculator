@@ -19,23 +19,20 @@ function generateMatrixTable(matrixId, rows, columns) {
 }
 
 // Handle the matrix size inputs dynamically
-document.getElementById('rows').addEventListener('input', function() {
-    const rows = Number(document.getElementById('rows').value);
-    const columns = Number(document.getElementById('columns').value);
+document.getElementById('rowsColumns').addEventListener('input', function() {
+    const rows = Number(document.getElementById('rowsColumns').value);
+    const columns = Number(document.getElementById('rowsColumns').value);
+
+    // Generate the matrix input tables for Matrix A
     generateMatrixTable('matrixA', rows, columns);
 });
 
-document.getElementById('columns').addEventListener('input', function() {
-    const rows = Number(document.getElementById('rows').value);
-    const columns = Number(document.getElementById('columns').value);
-    generateMatrixTable('matrixA', rows, columns);
-});
 
 document.getElementById('eigenValueForm').addEventListener('submit', function (e) {
     e.preventDefault(); // Prevents the page from refreshing on form submission
 
-    const rows = Number(document.getElementById('rows').value);
-    const columns = Number(document.getElementById('columns').value);
+    const rows = Number(document.getElementById('rowsColumns').value);
+    const columns = Number(document.getElementById('rowsColumns').value);
     
     // Ensure square matrix
     if (rows !== columns) {

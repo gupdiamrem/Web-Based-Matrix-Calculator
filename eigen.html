@@ -33,10 +33,8 @@
         <div class="main-content">
             <div class="input-section">
                 <form id="matrixSizeForm">
-                    <label for="rows">Rows:</label>
-                    <input type="number" id="rows" name="rows" min="1" value="0">
-                    <label for="columns">Columns:</label>
-                    <input type="number" id="columns" name="columns" min="1" value="0">
+                    <label for="rowsColumns">Rows and Columns (Can Only be Square Matrix):</label>
+                    <input type="number" id="rowsColumns" name="rows" min="1" value="0">
                 </form>
             </div>
 
@@ -49,7 +47,7 @@
                 </div>
 
                 <div class="button-container">
-                    <button type="submit">Calculate</button>
+                    <button type="submit" id="submitButton">Calculate</button>
                     <button type="button" id="clearButton">Clear</button>
                 </div>
             </form>
