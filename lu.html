@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matrix Addition</title>
+    <title>LU Factorization</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- Header Section -->
     <header class="page-header">
-        <h1>Matrix Addition</h1>
+        <h1>LU Decomposition</h1>
     </header>
     
     <div class="container">
@@ -27,62 +27,62 @@
                 <li><a href="eigen.html">Eigenvalues and Eigenvectors of Matrix</a></li>
                 <li><a href="rank.html">Rank</a></li>
                 <li><a href="lu.html">LU Decomposition</a></li>
-
-
             </ul>
         </div>
+
         <div class="main-content">
             <div class="input-section">
             <form id="matrixSizeForm">
-                <label for="rows">Rows:</label>
-                <input type="number" id="rows" name="rows" min="1" value="0">
-                <label for="columns">Columns:</label>
-                <input type="number" id="columns" name="columns" min="1" value="0">
+                <label for="rowsColumns">Rows and Columns:</label>
+                <input type="number" id="rowsColumns" name="rows" min="1" value="0">
             </form>
         </div>
 
-            <form id="matrixAdditionForm">
+            <form id="luFactorizationForm">
                 <div class="matrix-container">
                     <div class="matrix-section">
-                        <h2>Matrix A:</h2>
+                        <h2>Matrix:</h2>
                         <table id="matrixA" class="matrix-table"></table>
-                    </div>
-                    <div class="matrix-section">
-                        <h2>Matrix B:</h2>
-                        <table id="matrixB" class="matrix-table"></table>
                     </div>
                 </div>
                 <div class="button-container">
-                <button type="submit" id="submitButton">Calculate</button>
-                <button type="button" id="clearButton">Clear</button>
+                    <button type="submit" id="submitButton">Calculate</button>
+                    <button type="button" id="clearButton">Clear</button>
                 </div>
             </form>
             
             <div class="result-container">
-            <h3>Matrix Sum:</h3>
-            <div id="result"></div>
-        </div>
-        <!-- Explanation Container for Matrix Addition -->
-        <div id="additionExplanation" class="explanation-container">
-            <h3>Steps to Add Matrices:</h3>
-            <ol>
-            <li>Ensure both matrices have the same dimensions (rows x columns).</li>
-            <li>For each element in the matrices, add the corresponding elements from both matrices.</li>
-            <li>The resulting matrix will have the same dimensions as the input matrices.</li>
-            </ol>
-        </div>
+                <h3>LU Decomposition Result:</h3>
+                <div id="result">
+                    <p>Lower Triangular Matrix (L):</p>
+                    <div id="LMatrix"></div>
+                    <p>Upper Triangular Matrix (U):</p>
+                    <div id="UMatrix"></div>
+                </div>
+            </div>
 
+            <!-- Explanation Container for LU Factorization -->
+            <div id="luFactorizationExplanation" class="explanation-container">
+                <h3>Steps to Perform LU Decomposition:</h3>
+                <ol>
+                    <li>Start with a square matrix (A) (n x n).</li>
+                    <li>Initialize an identity matrix (L) for the lower triangular matrix and a zero matrix (U) for the upper triangular matrix.</li>
+                    <li>For each pivot element in matrix (A), apply Gaussian elimination to eliminate the elements below the pivot, updating (L) and (U) accordingly.</li>
+                    <li>The diagonal elements of (U) remain as pivots, and (L) contains the multipliers used during elimination.</li>
+                    <li>Resulting matrices satisfy ( A = L * U ) .</li>
+                </ol>
+            </div>
         </div>
     </div>
+
     <footer>
         <p>&copy; 2025 Matrix Calculator. All rights reserved.</p>
         <ul class="footer-links">
-            
             <li><a href="https://github.com/gupdiamrem" target="_blank">GitHub</a></li>
             <li><a href="https://www.linkedin.com/in/charlie-mcewen-63a446269/" target="_blank">LinkedIn</a></li>
         </ul>
     </footer>
-    <script src="js/matrixAdd.js"></script>
 
+    <script src="js/LUdecomp.js"></script>
 </body>
 </html>
