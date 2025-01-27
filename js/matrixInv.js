@@ -19,29 +19,22 @@ function generateMatrixTable(matrixId, rows, columns) {
 }
 
 // Handle the matrix size inputs dynamically
-document.getElementById('rows').addEventListener('input', function() {
-    const rows = Number(document.getElementById('rows').value);
-    const columns = Number(document.getElementById('columns').value);
+document.getElementById('rowsColumns').addEventListener('input', function() {
+    const rows = Number(document.getElementById('rowsColumns').value);
+    const columns = Number(document.getElementById('rowsColumns').value);
 
     // Generate the matrix input tables for Matrix A and Matrix B
     generateMatrixTable('matrixA', rows, columns);
 });
 
-document.getElementById('columns').addEventListener('input', function() {
-    const rows = Number(document.getElementById('rows').value);
-    const columns = Number(document.getElementById('columns').value);
-
-    // Generate the matrix input tables for Matrix A and Matrix B
-    generateMatrixTable('matrixA', rows, columns);
-});
 
 // Handle the matrix inverse form submission
 document.getElementById('matrixInverseForm').addEventListener('submit', function(e) {
     e.preventDefault(); // Prevents the page from refreshing on form submission
 
     // Get the input matrix from the table
-    const rows = Number(document.getElementById('rows').value);
-    const columns = Number(document.getElementById('columns').value);
+    const rows = Number(document.getElementById('rowsColumns').value);
+    const columns = Number(document.getElementById('rowsColumns').value);
     const matrixA = getMatrixValues('matrixA', rows, columns);
 
     try {

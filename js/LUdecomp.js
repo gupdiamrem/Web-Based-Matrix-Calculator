@@ -103,10 +103,11 @@ function calculateLU(matrix) {
 
 // Display L and U matrices
 function displayLU(L, U, rows) {
-    
+
     displayResult(L, rows, 'LMatrix'); // Display L matrix
     displayResult(U, rows, 'UMatrix'); // Display U matrix
 }
+
 function displayResult(matrix, rows, containerId) {
     const container = document.getElementById(containerId);
     container.innerHTML = ''; // Clear previous content
